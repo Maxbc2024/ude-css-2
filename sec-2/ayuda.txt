@@ -1,0 +1,10 @@
+
+
+http://127.0.0.1:5500/index.html
+
+liveserver
+
+https://cdnjs.com/libraries/font-awesome
+
+
+
