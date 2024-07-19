@@ -51,7 +51,7 @@ aside {
     padding: 10px;
 }
 
-/* ********************* lado left  ******************/
+/* -------------------- lado left  ------------*/
 
 .flex-2 {
     /* background-color: red; */
@@ -102,107 +102,5 @@ aside {
         margin: 0;
     }
 }
-
-
-/*-------profiles styling ------------*/
-
-.profile-pix img {
-    width: 100%;
-    object-fit: cover;
-}
-
-.profile-icons, .skills-container {
-    border-bottom: 1px solid rgb(184,177,177);
-    margin-inline: 25px;
-}
-
-#head-main {
-    font-size: 25px;
-    margin-block: 15px 10px;
-    display: flex;
-    justify-content: center;
-}
-
-#f-icons {
-    margin-right: 10px;
-    color: teal;
-    font-size: 20px;
-    align-self: center;
-}
-
-#h-5 {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    color: rgb(64,62,62);
-}
-
-
-/* ----------- Skills styling ------------*/
-
-.skills-container {
-    padding-bottom: 20px;
-}
-
-.width-full {
-    width: 100%;
-    background-color: #ccc;
-    border-radius: 10px;
-}
-
-.width-full div {
-    background-color: teal;
-    text-align: center;
-    border-radius: 10px;
-}
-
-/* porcentaje */
-.width-95 {
-    width: 95%;
-}
-
-.width-90 {
-    width: 90%;
-}
-.width-75 {
-    width: 75%;
-}
-.width-55 {
-    width: 55%;
-}
-
-/*social icons*/
-.social-icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    flex-wrap: wrap;
-}
-
-.social-icons i {
-    margin-right: 10px;
-    color: teal;
-    font-size: 35px;
-    margin-bottom: 10px;
-}
-
-.social-icons i:hover {
-    cursor: pointer;
-    color: #e94403;
-}
-
-/*    <= 380px */
-@media screen and (max-width:380px) {
-    .social-icons i {
-        font-size: 25px;
-    }
-    #head-main {
-        font-size: 18px;
-    }
-}
-
-/* ********************* lado RIGHT  ******************/
-
 
 
