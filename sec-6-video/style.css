@@ -142,24 +142,31 @@ header {
 section {
     background-color: teal;
     /* background-color: teal; */
-    height: 10vh;
+    height: 90vh;
     /* ver */
     margin-inline: 12px;
     margin-bottom: 12px;
 }
 
-.shorts article {
+/* .shorts article {
     background-color: blueviolet;
     width: 32%;
     min-height: 30vh;
 }
 
-
 .wrap article {
     background-color: brown;
     width: 32%;
     min-height: 30vh;
+} */
+
+.wrap article, .shorts article{
+    background-color: #fff;
+    width: 32%;
+    min-height: 30vh;
 }
+
+
 
 .content {
     display: flex;
@@ -314,4 +321,79 @@ article {
 .block .icons {
     margin-right: 15px;
     color: red;
+}
+
+.short-story video {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.line-shorts {
+    border-bottom: 2px solid hwb(0 100% 30%);
+    margin-bottom: 25px;
+}
+
+
+/* -------------------------- */
+
+/*Responsiveness of page layout*/
+/* -- <= 1024px  ---*/
+@media screen and (max-width:1024px) {
+    /* video cortos se reducen de 6 a 3 en una fila */
+    .shorts {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+/* -- <= 900px  ---*/
+@media screen and (max-width:900px)  {
+    /* video se reduce de 3 columnas a 2 columnas */
+    .wrap article {
+        width: 46%;
+    }
+    nav {
+        width: 50px;
+    }
+    /* se expanda el contenedor */
+    .container {
+        width: 94%;
+    }
+}
+
+/* -- <= 620px  ---*/
+@media screen and (max-width:620px) {
+    /* videos chorts se reduce de 3 columns a 2 columnns */
+    .shorts article {
+        width: 46%;
+    }
+}
+
+/* -- <= 425px  ---*/
+@media screen and (max-width:425px) {
+    /* videos se reduce 2 columnas a 1 colunmna */
+    .shorts article, .wrap article {
+        width: 100%;
+    }
+    /* revisar */
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(370px,1fr));
+    }
+}
+
+/* -- <= 400px  ---*/
+@media screen and (max-width:400px) {
+    nav {
+        min-height: 150vh;
+    }
+}
+
+/* -- <= 320px  ---*/
+@media screen and (max-width:320px) {
+    nav {
+        width: 40px;
+        padding-inline: 7px;
+    }
 }
