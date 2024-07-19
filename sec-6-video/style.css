@@ -1,0 +1,317 @@
+
+.lineaborde_a {
+    border: 1px solid red;
+}
+
+.lineaborde_b {
+    border: 1px solid blue;
+}
+
+.lineaborde_C {
+    border: 1px solid olivedrab;
+}
+
+.lineaborde_d {
+    border: 1px solid rgb(212, 0, 255);
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Gill Sans MT';
+}
+
+body {
+    margin: 0;
+}
+
+/* ------------------------------------------------------ */
+
+nav{
+    /* background-color: orange; */
+}
+
+header{
+    /* background-color: purple; */
+}
+
+/* .wrap article{
+    background-color: brown;
+}
+
+.shorts article{
+    background-color: blueviolet;
+} */
+
+main {
+    display: flex;
+}
+/* ------------------- menu ----------------- */
+nav {
+    width: 20%;
+    /* VH significa viewport height (altura del dispositivo). También funciona como porcentaje, especificar 10vh es equivalente a ocupar 10% de la altura visible de la pantalla. */
+    height: 100vh;
+    /* para que funciones debe tener position inicial(top este caso) */
+    position: sticky;
+    top: 0;
+
+    box-shadow: 3px 3px 3px lightgrey;
+}
+
+a {
+    /* le quita la linea */
+    text-decoration: none;
+}
+
+nav {
+    /* padding arriba y abajo */
+    padding-block: 20px;
+}
+
+
+.nav-container a{
+    color: #222121;
+    display: flex;
+    padding:10px;
+    margin-inline: 6px;
+    font-size: 20px;
+    /* alinea en y */
+    align-items: center;
+}
+
+.nav-container a:hover {
+    background-color: lightgray;
+    border-radius: 30px;
+}
+
+.nav-container .icons {
+    padding-right: 10px;
+    font-size: 25px;
+}
+
+.line {
+    border-top: 1px solid hwb(0 100% 30%);
+    margin: 15px;
+}
+
+.nav-container img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+/* menu responsive */
+/* -- < 900  ---*/
+@media screen and (max-width:900px) {
+    nav {
+        width: 50px;
+    }
+
+
+    .hide {
+        display: none;
+    }
+    .nav-container a:hover {
+        background-color: unset;
+        border-radius: unset;
+    }
+    .nav-container img {
+        margin-right: 9px;
+    }
+    .nav-container a {
+        justify-content: center;
+    }
+}
+
+/* ------------------------ container ------------------------ */
+
+.container{
+    width: 80%;
+}
+
+
+header {
+    margin-bottom: 10px;
+    /* el minimo que se va reducir */
+    /* em= 3 em * 16px = 48px  (padre = font-size: 16px;) */
+    /* em = rem */
+    min-height: 3em;
+}
+
+section {
+    background-color: teal;
+    /* background-color: teal; */
+    height: 10vh;
+    /* ver */
+    margin-inline: 12px;
+    margin-bottom: 12px;
+}
+
+.shorts article {
+    background-color: blueviolet;
+    width: 32%;
+    min-height: 30vh;
+}
+
+
+.wrap article {
+    background-color: brown;
+    width: 32%;
+    min-height: 30vh;
+}
+
+.content {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.shorts {
+    /* margin a los castados izq y der */
+    margin-inline: 12px;
+}
+
+/* container responsive */
+/* -- < 900  ---*/
+@media screen and (max-width:900px) {
+    
+}
+
+
+/* ------------------- HADER ----------------- */
+
+.top-trends {
+    padding: 15px;
+    display: flex;
+    /* ALINEA X */
+    justify-content: center;
+}
+
+.top-trends .trends {
+    color: #000;
+    margin-right: 10px;
+    background-color: #c5c2c2;
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.top-trends .all {
+    color: #fff;
+    background-color: #000;
+}
+
+
+/* container responsive */
+/* -- < 920  ---*/
+@media screen and (max-width:920px) {
+    .top-trends {
+        /* crea otra fila */
+        flex-wrap: wrap;
+    }
+    .top-trends .trends {
+        margin-bottom: 7px;
+    }
+}
+
+/* ------------------- COVER IMAGE ----------------- */
+
+
+.cover-image {
+    background: linear-gradient(145deg,rgba(202,104,105,0.5),rgba(223,223,81,0.5)),
+    url('images/19a.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/* ------------------- VIDEO ASIDE ----------------- */
+
+.video-aside {
+    position: relative;
+}
+
+.video-aside video {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.time {
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    /* REVISAR */
+    position: absolute;
+    right: 15px;
+    bottom: 20px; 
+}
+
+article {
+    padding: 10px;
+}
+
+/*----- poster  */
+
+.poster img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.text h4 {
+    margin: 4px;
+    font-size: 15px;
+    color: #161414;
+    font-weight: 800; 
+    /* revisar */
+    word-wrap: break-word;
+}
+
+.text p {
+    margin: 2px 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #4d4a4a;
+}
+
+.poster {
+    display: flex;
+    margin-top: 10px;
+}
+
+
+/* container responsive */
+/* -- < 520  ---*/
+@media screen and (max-width:520px) {
+    .poster {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* ------------------- SHORT VIDEO  ----------------- */
+
+.block {
+    padding-top: 1.5em;
+    padding-inline: 20px;
+    font-size: 25px;
+    border-top: 2px solid hwb(0 100% 30%);
+    display: flex;
+    align-items: center;
+}
+
+.block .icons {
+    margin-right: 15px;
+    color: red;
+}
