@@ -14,7 +14,9 @@ body {
     color: var(--text-color);}
 a {text-decoration: none;}
 
-/*Navigation*/
+
+/* ---------------------------- Navigation ----------------------------*/
+
 header {
     background-color: var(--theme-color);
     width: 100%;
@@ -337,7 +339,9 @@ input[type="checkbox"] {display: none;}
     .search i {margin-left: 2px;}
 }
 
-/*Content Flex Layout Styling of the Page*/
+
+/* ---------------------------- Content Flex Layout Styling of the Page ----------------------------*/
+
 .content-container {
     display: flex;
     justify-content: space-between;
@@ -397,7 +401,10 @@ input[type="checkbox"] {display: none;}
     top: 70px;
     padding: 20px;
 }*/
-/*Footer*/
+
+
+/* ---------------------------- Footer ----------------------------*/
+
 footer {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(400px,1fr));

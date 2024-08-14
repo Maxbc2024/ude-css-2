@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Lobster&display=swap');
+
 * {box-sizing: border-box;}
+
 body {
     margin: 0;
     font-family: 'Comfortaa', cursive;
 }
+
 a {text-decoration: none;}
+
 /*font-family: 'Lobster', cursive;*/
+
+/* ----------------------- <!--Navigation and Slider--> ----------------------- */
+
 .main-head {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
@@ -46,6 +53,9 @@ a {text-decoration: none;}
     grid-column: 1/-1;
     grid-row-end: span 2;
 }
+
+/* ----------------------- <!--Whole Page layout--> ----------------------- */
+
 @media (min-width:1505px) {
     .page-container {
         grid-template-columns: repeat(auto-fit,minmax(600px,1fr));    
@@ -57,7 +67,7 @@ a {text-decoration: none;}
     }
 }
 
-/*Footer layout*/
+/* ----------------------- Footer layout -----------------------*/
 .footer {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
