@@ -163,7 +163,7 @@ input[type="checkbox"] {display: none;}
     display: none;
 }
 
-/*Responsiveness of navigation*/
+/*--------------- Responsiveness of navigation----------------------------------*/
 @media screen and (max-width:1027px) {
     .navbar .sideMenu .submenu {
         left: -15%;

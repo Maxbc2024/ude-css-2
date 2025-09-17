@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+* {margin: 0;
+   box-sizing: border-box;
+   font-family: 'Raleway', sans-serif;}
+:root {
+    --theme-color:#3edaa2;
+    --hover-color:#eeeaea8f;
+    --text-color:#4d4a4a;
+    --body-bg: rgb(248,244,248);
+      
+    }
+body {
+    background-color: var(--body-bg);
+    color: var(--text-color);}
+a {text-decoration: none;}
+
+
+/* ---------------------------- Navigation ----------------------------*/
+
+header{
+    background-color: var(--theme-color);
+    display: flex;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    
+    width: 100%;
+    position: fixed; 
+    /* top: 0; 
+    z-index: 100;  */
+}
+
+header a {color: #fff;}
+.logo {width: 10%;}
+.logo img {
+    width: 50px;
+    height: 50px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.navbar{
+    width: 90%;
+    display: flex;
+    /* justify-content: right; */
+    /* position: relative; */
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    /* usa todo el espacio del menu */
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid blue; */
+
+}
+
+.navbar li {
+    padding-inline: 20px;
+    padding-top: 9px;
+    /* border: 1px solid red; */
+}
+
+/* les pone un punto al checkbox */
+input[type="checkbox"] {display: none;}
+.navbar .submenu label i {
+    /* float: right; */
+    /* display: block;  */
+}
+
+/* .navbar ul:first-child{
+    border: 1px solid blue;
+} */
+
+.navbar .menu {
+    flex-basis: 65%;
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+/* ---------- menu de la izquierda --------*/
+.navbar .menu .submenu {
+    /* el menu se sobrepone sobre el header */
+    position: absolute;
+
+    display: none;
+    
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    border-radius: 8px; 
+    /* left = sobre su padre que es relativo se pone a la izquierda */
+    left: 0;
+    top: 100%;
+    text-align: left; 
+    /* border: 1px solid red; */
+}
+
+/* los iconos de los menus mas grandes  */
+.submenu .drop-icons {
+    /* border: 1px solid red; */
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--theme-color);
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 10px; 
+}
+
+.navbar .menu .submenu .submenu-1 {
+    display: none;
+    position: absolute;
+
+    box-shadow: 0 0 2px rgba(0,0,0,.5);
+    background-color: #fff;
+    /* lo pone ala izquierda junto del menu principal */
+    top: 20%;
+    left: 100%;
+}
+.navbar .submenu li:hover > .submenu-1 {
+    display: block;
+    width: 220px;
+}
+
+
+/* color verde a los link menus */
+.submenu a {color: var(--theme-color);}
+/* espaciado a los link */
+.navbar .submenu li {padding: 25px;}
+.navbar .submenu li:hover {
+    background-color: var(--hover-color);
+}
+
+/* --------<!--sideMenu--> -------*/
+.navbar .sideMenu {
+    flex-basis: 35%;
+    /* border: 1px solid teal; */
+    position: relative;
+}
+
+.navbar .sideMenu .submenu {
+    /* sobrepone el menu  */
+    position: absolute;
+    /* no aparece */
+    display: none;
+
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    border-radius: 8px;
+    
+    /* border: 1px solid blueviolet; */
+
+    left: 0;
+    top: 100%;
+    text-align: left;
+}
+
+/* se desplega el menu hacia abajo */
+.navbar li:hover > .submenu {
+    display: block;
+    width: 300px; 
+}
+
+/* icono mas grande */
+.icon-nav {
+    font-size: 30px;
+}
+
+.search {
+    /* border: 1px solid red; */
+    /* alinea lo de adentro */
+    display: flex;
+    background-color: azure;
+    width: 250px;
+    /* mas alto el imput */
+    padding-block: 8px;
+
+    border-radius: 20px; 
+}
+
+.search i {
+    color: #4d4a4a;
+    font-size: 15px;
+    margin-left: 15px;
+    padding-right: 10px;
+}
+
+.search input {
+    width: 100%;
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 15px;
+}
+
+
+
+.navbar .menu label i,
+.navbar .sideMenu label i {
+    display: none;
+}
+
+
+
+/* avatar */
+.user-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* punto verde */
+.online {
+    position: relative;
+}
+.online::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: lime;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+/*--------------- Responsiveness of navigation----------------------------------*/
